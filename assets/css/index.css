@@ -1,0 +1,375 @@
+:root {
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  /* Main  */
+body {
+    background-color: var(--Almost-White);
+    align-items: center;
+    font-size: 18px;
+    line-height: 1;
+    font-family: 'Epilogue', sans-serif;
+  }
+
+h1 {
+    font-size: 55px;
+    color: var(--Almost-Black);
+    text-align: left;
+}
+
+p {
+    color: var(--Medium-Gray);
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+}
+  
+a {
+    text-decoration: none;
+    color: var(--Medium-Gray);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    background: var(--Almost-White);
+    z-index: 200;
+    position: fixed;
+    right: 25px;
+    top: 0;
+    padding: 35px 0;
+    left: 25px;
+    height: 50px;
+    gap: 80px;
+}
+
+#menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.nav-menu-1 {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu .nav-items:last-child {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 8px 10px;
+}
+.nav-items {
+    margin-left: 25px;
+}
+
+.nav-items a:hover, .nav-items a:focus, .nav-items a:active{
+    color: var(--Medium-Gray);
+    font-weight: 600;
+}
+
+.navbar .logo img {
+    display: block;
+    width: 75px;
+}
+  
+.navbar .logo {
+    transition: all 0.3s ease-in-out;
+}
+  
+.navbar .logo:hover {
+    opacity: 1;
+}
+  
+/* Hamburger menu */
+.hamburger, .nav-close {
+    display: none;
+}
+  
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.bar {
+    display: block;
+    width: 27px;
+    height: 20px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+ 
+/* Dropdown */
+.dropdown, .dropdown-2 {
+    display: flex;
+    gap: 6px;
+}
+
+.drop-menu {
+    position: fixed;
+    top: -1000px;
+    border-radius: 10px;
+    left: 127px;
+    width: 170px;
+    padding: 30px 5px 15px 20px;
+    box-shadow: 2px 2px 50px 2px hsl(0 0% 41% / 20%);
+    background-color: var(--Almost-White);
+}
+
+.drop-menu.active {
+    top: 60px;
+}
+
+.drop-link {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 15px;
+}
+
+.drop-link div {
+    width: 20%;
+}
+
+.drop-link p {
+    width: 80%;
+}
+
+.drop-menu-2 {
+    position: fixed;
+    top: -1000px;
+    border-radius: 10px;
+    left: 330px;
+    width: 130px;
+    padding: 30px 5px 15px 20px;
+    box-shadow: 2px 2px 50px 2px hsl(0 0% 41% / 20%);
+    background-color: var(--Almost-White);
+}
+
+.drop-menu-2.active {
+    top: 60px;
+}
+
+/* Hero */
+.wrapper {
+    display: flex;
+    margin: 100px auto;
+    width: 80%;
+    gap: 10%;
+}
+
+.sub-wrapper-1 {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+button {
+    background-color: var(--Almost-Black);
+    color: var(--Almost-White);
+    width: 110px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 14px 1px;
+}
+
+button:hover, button:focus, button:active {
+    color: var(--Almost-Black);
+    background: var(--Off-white);
+    border: 1px solid var(--Almost-Black);
+}
+
+.sponsors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8%;
+    width: 100%;
+}
+
+.sponsors div {
+    width: 25%;
+}
+
+.sponsors div img{
+    width: 100%;
+    height: auto;
+}
+
+.sub-wrapper-2 {
+    width: 50%;
+    height: auto;
+}
+.sub-wrapper-2 img {
+    width: 100%;
+}
+
+.sub-wrapper-3 {
+    display: none;
+}
+@media (max-width: 800px) {
+
+    body {
+        overflow-x: hidden;
+        margin: 10px 20px;
+      }
+
+    /* Navbar */
+    .navbar {
+        justify-content: space-between;
+        right: 0;
+        left: 0;
+        background: var(--Almost-White);
+        padding: 50px;
+    }
+
+    #menu {
+        width: 30px;
+        justify-content: flex-end;
+    }
+
+    .nav-menu {
+      position: fixed;
+      right: -100%;
+      top: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 70%;
+      height: 100%;
+      text-align: left;
+      transition: 0.3s;
+    }
+
+    .nav-menu-1 {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        text-align: left;
+        background-color: var(--Almost-White);
+        transition: 0.3s;
+      }
+
+      .body.active {
+        background: var(--Medium-Gray);
+      }
+
+    /* Add spacing between hamburer and navigation menu */
+    .nav-menu-1 li:first-child {
+      margin-top: 10rem;
+    }
+
+    .nav-menu li:first-child {
+        margin-top: 25rem;
+    }
+  
+    .nav-menu .nav-items {
+        width: 80%;
+        text-align: center;
+    }
+
+    .nav-menu.active, .nav-menu-1.active {
+      right: 0;
+    }
+  
+    .nav-items {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+
+    .nav-close {
+      position: fixed;
+      width: 35px;
+      height: 35px;
+      display: block;
+      top: 40px;
+      right: -100%;
+      transition: 0.3s;
+    }
+  
+    .nav-close.active {
+      right: 50px;
+    }
+  
+    .close {
+      display: block;    
+      width: 25px;
+      height: 25px;
+    }
+  
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+
+    /* Dropdown Menu */
+
+    /* Hero */
+    .wrapper {
+        flex-direction: column-reverse;
+        width: 95%;
+    }
+    .wrapper {
+        gap: 50px;
+    }
+    
+    .sub-wrapper-1 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    
+    h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    br {
+        display: none;
+    }
+
+    p {
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    button {
+        margin: auto;
+    }
+
+    .sub-wrapper-3 {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .sub-wrapper-3 img {
+        width: 100%;
+    }
+    
+    .sub-wrapper-2 {
+        display: none;
+    }
+  }
